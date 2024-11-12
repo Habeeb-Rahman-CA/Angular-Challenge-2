@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row mt-4 d-flex justify-content-center">
+        <div class="col-4">
+            <div class="card p-4">
+                <h4 class="text-center text-uppercase fw-bold">User Details</h4>
+                <div class="details pt-3 d-flex flex-column gap-2">
+                    <h5>Name : {{name}}</h5>
+                    <h5>Age : {{age}}</h5>
+                    <h5>Location: {{location}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card p-4">
+                <h4 class="text-center text-uppercase fw-bold">Add Users</h4>
+                <form class="pt-3 d-flex flex-column gap-2">
+                    <input class="form-control" [(ngModel)]="name" name="Uname" type="text" placeholder="Name">
+                    <input class="form-control" [(ngModel)]="age" name="Uage" type="number" placeholder="Age">
+                    <input class="form-control" [(ngModel)]="location" name="Ulocation" type="text" placeholder="Location">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
