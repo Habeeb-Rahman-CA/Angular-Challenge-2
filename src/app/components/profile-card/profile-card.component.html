@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row mt-4 d-flex justify-content-center">
         <div class="col-4">
-            <div class="card p-4">
+            <div class="card p-4 shadow-lg">
                 <h4 class="text-center text-uppercase fw-bold">User Details</h4>
                 <div class="details pt-3 d-flex flex-column gap-2">
                     <h5>Name : {{name}}</h5>
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="col-4">
-            <div class="card p-4">
+            <div class="card p-4 shadow-lg">
                 <h4 class="text-center text-uppercase fw-bold">Add Users</h4>
                 <form class="pt-3 d-flex flex-column gap-2">
                     <input class="form-control" [(ngModel)]="name" name="Uname" type="text" placeholder="Name">
@@ -20,5 +20,6 @@
                 </form>
             </div>
         </div>
+        <button class="btn btn-success w-50 mt-3 p-2 rounded-3 shadow" (click)="greetings()">Send Greetings!</button>
     </div>
 </div>

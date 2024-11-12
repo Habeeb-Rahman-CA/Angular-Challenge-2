@@ -1,1 +1,7 @@
-<app-profile-card></app-profile-card>
+<app-profile-card [name]="userName" [age]="userAge" [location]="userLocation" (greet)="onReceiveGreet($event)" />
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <h2 class="mt-3">{{greetMessage}}</h2>
+    @if (greetMessage) {
+        <button class="btn btn-warning w-25 shadow" (click)="resetForm()">Thank You</button>
+    }
+</div>

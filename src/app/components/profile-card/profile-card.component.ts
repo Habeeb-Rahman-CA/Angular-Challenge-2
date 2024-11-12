@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,7 +11,17 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProfileCardComponent {
   
-  name: string = ''
-  age: number = 0
-  location: string = ''
+  @Input() name: string = ''
+  @Input() age: number = 0
+  @Input() location: string = ''
+
+  @Output() greet = new EventEmitter<string>()
+
+  greetings(){
+    const message = `Welcome, ${this.name} from ${this.location}!`
+    this.greet.emit(message)
+    this.name = ''
+    this.age = 0
+    this.location = ''
+  }
 }
